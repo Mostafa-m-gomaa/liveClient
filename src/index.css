@@ -23,7 +23,7 @@ html, body {
 }
 
 main {
-  height: calc(100% - 64px); /*Navbar height is 64px*/
+
 }
 
 .p0 {
@@ -35,7 +35,7 @@ nav {
 }
 
 .container {
-  min-height: 100%;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,11 +73,23 @@ nav {
 }
 
 button {
-  background: #0acd1d;
+  background: #0f67db;
   border: none;
   padding: 10px 0;
   margin-top: 10px;
   border-radius: 2px;
   width: 100%;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-weight: bolder;
+  cursor: pointer;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 10px;
+  transition: 0.2s;
+  position: relative;
+  z-index: 1000;
+}
+button:hover {
+  background: #5a6470;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }

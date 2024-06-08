@@ -95,6 +95,19 @@ const RoomScreen = (props) => {
     history.push("/");
   };
 
+  const copyLinkToClipboard = () => {
+    const currentUrl = window.location.href;
+
+    navigator.clipboard.writeText(currentUrl).then(
+      () => {
+        // يمكنك إضافة أي تفاعل هنا إذا كنت ترغب في ذلك
+      },
+      (err) => {
+        console.error('Failed to copy the link: ', err);
+      }
+    );
+  };
+
   return (
     <div className="room row">
       <div className="videos col s10 p0">
@@ -139,6 +152,11 @@ const RoomScreen = (props) => {
               <span>Share Screen</span>
             </div>
           </div>
+          <button style={{
+            maxWidth:"fit-content",
+          }} onClick={copyLinkToClipboard}>
+      Copy Page Link
+    </button>
           <div onClick={leaveMeeting} className="control">
             <div className="control__btn-container">
               <span className="leave_meeting">Leave Meeting</span>

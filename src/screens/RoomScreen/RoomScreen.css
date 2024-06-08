@@ -107,5 +107,5 @@ video {
 
 .room,
 .room .col {
-  height: 100%;
+  height: 100vh;
 }
